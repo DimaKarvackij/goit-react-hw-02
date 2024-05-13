@@ -27,6 +27,9 @@ function App() {
     const handleReset = () => {
         setFedback({ good: 0, neutral: 0, bad: 0 });
     };
+    useEffect(() => {
+        localStorage.setItem("saved-feedback-statistics", JSON.stringify(clicks));
+    }, [clicks]);
 
 
     return (
