@@ -10,7 +10,7 @@ import Description from "./components/Description/Description"
 
 function App() {
     const [feedback, setFeedback] = useState(() => {
-        const savedFeedback = localStorage.getItem("feedback");
+        const savedFeedback = localStorage.getItem("saved-feedback-statistics");
         return savedFeedback
             ? JSON.parse(savedFeedback)
             : { good: 0, neutral: 0, bad: 0 };
